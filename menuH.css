@@ -1,0 +1,50 @@
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Esconder checkbox */
+.menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    background: black;
+    height: 4px;
+    width: 100%;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Esconder o menu */
+.menu {
+    display: none;
+    background: #333;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-toggle:checked ~ .menu {
+    display: block;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
