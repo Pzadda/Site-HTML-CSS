@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Fitness</title>
+    <link rel="stylesheet" href="menuH.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <input type="text" class="search-bar" placeholder="Buscar...">
+        <button class="login-btn" onclick="openLoginModal()">Login</button>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>       
+        </label>
+
+        <nav class="menu">
+            <a href="#">Login</a>
+            <a href="#">Cadastro</a>
+            <a href="#">Planos</a>
+            <a href="#">Atividades</a>
+            <a href="#">Idioma</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner">
+            <div class="text-block">
+                <p><span class="bold">SEM MAIS</span> <span class="highlight">DESCULPAS</span></p>
+                <p>JUNTE-SE A NÓS HOJE </p>
+            </div>
+            <div class="pricing">
+                <p>Matrículas</p>
+                <p class="price">A PARTIR DE <span class="highlight">R$79,90</span>/mês</p>
+            </div>
+            <div class="cta">
+                <p>GANHE 7 DIAS DE TESTE GRÁTIS</p>
+                <h1>FITNESS</h1>
+                <p>TREINAMENTO PESSOAL | BOMBA DE CORPO</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openLoginModal() {
+            document.getElementById("loginModal").style.display = "flex";
+        }
+
+        function closeLoginModal() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById("loginModal");
+            if (event.target === modal) {
+                closeLoginModal();
+            }
+        };
+    </script>
+</body>
+</html>
